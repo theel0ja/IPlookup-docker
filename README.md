@@ -1,5 +1,5 @@
-# lib.theel0ja.info
-lib.theel0ja.info Docker
+# IPlookup-docker
+theel0ja/IPLookup deployed in Docker
 
 ## Usage
 ```
