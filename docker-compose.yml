@@ -1,0 +1,15 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:alpine #amd64
+    ports:
+      - 172.19.5.1:30005:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./public_html:/app
+  web:
+    build: .
+    volumes:
+      - ./public_html:/app
+      - /app/vendor
+      - /app/cache
