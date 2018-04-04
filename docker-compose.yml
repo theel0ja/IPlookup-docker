@@ -1,6 +1,7 @@
 version: '2'
 services:
   nginx:
+    restart: always
     image: nginx:alpine #amd64
     ports:
       - 172.19.5.1:30005:80
@@ -8,6 +9,7 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./public_html:/app
   web:
+    restart: always
     build: .
     volumes:
       - ./public_html:/app
